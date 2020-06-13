@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+{
+    "name": "Module facebook Chatbot API",
+    "summary": "",
+    "version": "1.0.0",
+    "category": "API",
+    "website": "",
+    "author": "Nattivut.S",
+    "depends": [
+        "base",
+        "web",
+        "sale",
+        "stock",
+    ],
+    "data": [
+        # 'views/user_view.xml',
+        # 'security/ir.model.access.csv',
+        # 'views/hr_attendance_view.xml',
+        # 'views/hr_employee_view.xml',
+        # 'views/attendance_config.xml',        
+        # 'views/hr_attendance_form.xml',
+        # "views/hr_holidays.xml",
+        # "views/hr_attendance_timeoff.xml",
+        # "views/hr_working_time.xml",
+        # 'views/ir_cron_hr_attdance.xml',
+        # 'views/ir_cron_hr_holidays.xml',
+        # 'views/service_noc_working_time.xml',
+        # 'wizard/service_noc_working_time_wizard_view.xml',
+    ],
+    'qweb': [],
+}

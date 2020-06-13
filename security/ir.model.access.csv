@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_api_attendance_access_token,api.attendance.access.token,module_api_attendances.model_api_attendance_access_token,base.group_user,1,1,1,1
+api_attendance_line_user,api.attendance.line.user,module_api_attendances.model_api_attendance_line_user,base.group_user,1,1,1,1
+hr_attendance_line,api.attendance.hr.attendance.line,module_api_attendances.model_hr_attendance_line,base.group_user,1,1,1,1
+hr_attendance_reason,api.attendance.hr.attendance.reason,module_api_attendances.model_hr_attendance_reason,base.group_user,1,1,1,1
+hr_working_time,api.attendance.hr.working.time,module_api_attendances.model_hr_working_time,base.group_user,1,1,1,1
+hr_attendance_form_access,api.attendance.hr.attendance.form,module_api_attendances.model_hr_attendance_forgotten,hr_attendance.group_hr_attendance_manager,1,1,1,1
+service_noc_working_time,api.service.noc.working.time,module_api_attendances.model_service_noc_working_time,bst_service.group_service_head,1,1,1,1
+

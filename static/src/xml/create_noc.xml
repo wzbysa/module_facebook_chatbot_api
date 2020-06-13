@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <template id="template" xml:space="preserve">
+        <t t-extend="CalendarView.buttons">
+            <t t-jquery="button.o_calendar_button_month" t-operation="after">
+            <t t-log="widget"/>
+            <t t-log="widget.options.action.context.date_check"/>
+                <button t-if="widget.model == 'service.noc.working.time'"
+                     class="btn btn-primary btn-sm o_list_tender_button_service_noc" type="button">
+<!--                    <button t-if="widget.model == 'service.noc.working.time.wizard' and
+                      widget.options.action.xml_id == 'module_api_attendances.bst_ticket_action_main_tree'"
+                      class="btn btn-primary btn-sm o_list_tender_button_service_noc" type="button">-->
+                      Create Noc
+                </button>
+            </t>
+        </t>
+    </template>
+
