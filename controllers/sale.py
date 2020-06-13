@@ -86,7 +86,7 @@ class SaleController(http.Controller):
                 'customer_id': res_partner.id,
                 'sale_order':sale_order.name,
             }
-            return json.dumps(json.load(response),ensure_ascii=False)
+            return json.dumps(response,ensure_ascii=False)
             # Response.make_response(data=response, message="Success")
             
         except Exception as e:
@@ -119,7 +119,7 @@ class SaleController(http.Controller):
                 'sale_order':sale_order.name,
                 'item':item,
             }
-            return json.dumps(json.JSONDecoder().decode(response),ensure_ascii=False)
+            return json.dumps(response,ensure_ascii=False)
             # Response.make_response(data=response, message="Success")
         except Exception as e:
             print(e)
@@ -163,7 +163,7 @@ class SaleController(http.Controller):
                 'sale_order':sale_order.name,
                 'item':item,
             }
-            return json.dumps(json.load(response),ensure_ascii=False)
+            return json.dumps(response,ensure_ascii=False)
             # Response.make_response(data=response, message="Success")
         except Exception as e:
             print(e)
@@ -192,7 +192,7 @@ class SaleController(http.Controller):
                 'result': res,
                 'qty_available': product.qty_available,
             }
-            return json.dumps(json.load(response),ensure_ascii=False)
+            return json.dumps(response,ensure_ascii=False)
             # Response.make_response(data=response, message="Success")
             
         except Exception as e:
