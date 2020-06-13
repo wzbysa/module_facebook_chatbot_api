@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>  
+            <!-- primary|extension Inherited .:Form:. view for "model" -->
+            <record id="view_model_form_inherited" model="ir.ui.view">
+                <field name="name">view_partner_form_inherited</field>
+                <field name="model">res.partner</field>
+                <!-- Please veryfiy, that the following inherited view really sticks to the naming convention. -->
+                <field name="inherit_id" ref="base.view_partner_form" />                
+                <field name="arch" type="xml">
+                    <xpath expr="//field[@name='type']" position="after">
+                        
+                        <!-- <group name="facebook_info" string="Facebook Info"> -->
+                        
+                            <field name="first_name" />
+                            
+                            <field name="last_name" />
+                            
+                            <field name="chatbot_message_token" />
+                        <!-- </group> -->
+                    </xpath>
+                </field>
+            </record>
+    </data>
+</odoo>

@@ -15,7 +15,7 @@
     "data": [
         # 'views/user_view.xml',
         # 'security/ir.model.access.csv',
-        # 'views/hr_attendance_view.xml',
+        'views/res_partner_views.xml',
         # 'views/hr_employee_view.xml',
         # 'views/attendance_config.xml',        
         # 'views/hr_attendance_form.xml',

@@ -139,7 +139,10 @@ class SaleController(http.Controller):
                             ('id', '=', sale_order.partner_id.id),					
                             ], limit=1)             
                 res_partner.write({
-                    'name':body['customer_name'],
+                    'name':body['First Name']+' '+body['Last Name'],
+                    'first_name':body['First Name'],
+                    'last_name':body['Last Name'],
+                    'chatbot_message_token':body['User Id'],
                     'street':body['address_1'],
                     'street2':body['address_2'],
                     'city':body['city'],

@@ -13,6 +13,14 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     chatbot_message_token = fields.Char(
-        string='Message Token',
+        string='Facebook msg id',
     )
+    
+    first_name = fields.Char(
+        string='Facebook first name',
+    )
+    last_name = fields.Char(
+        string='Facebook last name',
+    )
+    
     
