@@ -53,6 +53,7 @@ class SaleController(http.Controller):
                                 'name':body['product_name'],
 								'default_code': body['SKU'],
 							})
+            order_line = request.env['sale.order.line']
             if sale_order:
                 # check product order of sale order
                 order_line = sale_order.order_line.search([('product_id','=',product.id)])
