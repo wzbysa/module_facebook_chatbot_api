@@ -39,6 +39,7 @@ class SaleController(http.Controller):
 							})
             # check draft sale order  of customer
             sale_order = request.env['sale.order']
+            so=False
             sale_order = request.env['sale.order'].sudo().search([
                 ('partner_id','=',res_partner.id),
                 ('state','=','draft'),
@@ -56,6 +57,7 @@ class SaleController(http.Controller):
 							})
             order_line = request.env['sale.order.line']
             if sale_order:
+                so=sale_order
                 # check product order of sale order
                 order_line = sale_order.order_line.search([('product_id','=',product.id)])
                 if order_line:
