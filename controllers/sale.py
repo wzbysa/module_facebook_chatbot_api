@@ -59,7 +59,9 @@ class SaleController(http.Controller):
             if sale_order:
                 so=sale_order
                 # check product order of sale order
-                order_line = sale_order.order_line.search([('product_id','=',product.id)],limit=1)
+                order_line = sale_order.order_line.search([
+                    ('order_id','=',so.id),
+                    ('product_id','=',product.id)])
                 if order_line:
                     # increase qty if exist product order
                     order_line.sudo().write({
