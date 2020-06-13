@@ -38,6 +38,7 @@ class SaleController(http.Controller):
 								'chatbot_message_token': body['recipient_id'],
 							})
             # check draft sale order  of customer
+            sale_order = request.env['sale.order']
             sale_order = request.env['sale.order'].sudo().search([
                 ('partner_id','=',res_partner.id),
                 ('state','=','draft'),
@@ -70,12 +71,12 @@ class SaleController(http.Controller):
                         'product_uom_qty':float(body['qty'])})                   
             else:
                 #create sale order if not exist draft sale order of customer 
-                sale_order.sudo().create({
+                so=sale_order.sudo().create({
                     'partner_id':res_partner.id,
                     'partner_invoice_id':res_partner.id,
                     'partner_shipping_id':res_partner.id,
                 })
-                order_line.sudo().create({'order_id':sale_order.id,'product_id':product.id,
+                order_line.sudo().create({'order_id':so.id,'product_id':product.id,
                         'product_uom_qty':float(body['qty'])})                
             item=[]
             for line in sale_order.order_line:
@@ -85,7 +86,7 @@ class SaleController(http.Controller):
                 'message':"Success",
                 'recipient_id': body['recipient_id'],
                 'customer_id': res_partner.id,
-                'sale_order':sale_order.name,
+                'sale_order':so.name,
             }
             return json.dumps(response,ensure_ascii=False)
             # Response.make_response(data=response, message="Success")
